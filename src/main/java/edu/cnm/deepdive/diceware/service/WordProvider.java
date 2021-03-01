@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.service;
+package edu.cnm.deepdive.diceware.service;
 
 import java.util.Collection;
 
