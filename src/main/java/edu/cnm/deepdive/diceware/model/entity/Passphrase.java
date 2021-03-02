@@ -1,7 +1,7 @@
 package edu.cnm.deepdive.diceware.model.entity;
 
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 import javax.persistence.CascadeType;
@@ -27,11 +27,13 @@ public class Passphrase {
       cascade = CascadeType.ALL, orphanRemoval = true)
   @OrderBy("order ASC")
   private final List<Word> words = new LinkedList<>();
+
   @NonNull
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   @Column(name = "passphrase_id", nullable = false, updatable = false)
   private Long id;
+
   @NonNull
   @CreationTimestamp
   @Temporal(TemporalType.TIMESTAMP)

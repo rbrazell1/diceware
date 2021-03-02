@@ -32,7 +32,7 @@ public class Word {
   @Column(nullable = false, updatable = false)
   private String content;
 
-  @Column(updatable = false)
+  @Column(name = "position", updatable = false)
   private int order;
 
   @NonNull

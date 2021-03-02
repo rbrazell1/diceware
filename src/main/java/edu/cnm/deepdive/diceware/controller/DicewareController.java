@@ -44,6 +44,7 @@ public class DicewareController {
     String[] words = generator.generate(length);
     for (String content : words) {
       Word word = new Word();
+      word.setContent(content);
       word.setPassphrase(passphrase);
       word.setOrder(passphrase.getWords().size());
       passphrase.getWords().add(word);
