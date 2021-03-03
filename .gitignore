@@ -43,7 +43,7 @@ local.properties
 ### Derby ###
 
 # - data directory
-#/diceware_db/
+/diceware_db/
 
 # - log file
 derby.log
