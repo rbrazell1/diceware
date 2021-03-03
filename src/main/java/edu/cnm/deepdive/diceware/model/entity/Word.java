@@ -2,6 +2,8 @@ package edu.cnm.deepdive.diceware.model.entity;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import edu.cnm.deepdive.diceware.view.WordSerializer;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -14,6 +16,7 @@ import org.springframework.lang.NonNull;
 
 @SuppressWarnings("JpaDataSourceORMInspection")
 @Entity
+@JsonSerialize(using = WordSerializer.class)
 public class Word {
 
   @NonNull
